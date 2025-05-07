@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Nothing to install in this simple build"
+
+  pre_build:
+    commands:
+      - echo "Preparing for build"
+
+  build:
+    commands:
+      - echo "Building project... (In this case, no build is needed for static html)"
+
+  post_build:
+    commands:
+      - echo "Build Completed!"
+
+artifacts:
+  files:
+    - "index.html"
+    - "style.css"
+    - "appspec.yml"
+    - "scripts/**"
