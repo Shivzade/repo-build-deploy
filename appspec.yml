@@ -5,11 +5,11 @@ files:
     destination: /usr/share/ngnix/html/
   - source: appspec.yml
     destination: /usr/share/ngnix/html/
-  - source: scripts/setup_ngnix.sh
+  - source: scripts/setup_nginx.sh
     destination: home/ubuntu/scripts/setup_ngnix.sh # Ensure this path is correct
 
 hooks:
   AfterInstall:
-  - location: scripts/setup_ngnix.sh  # Reference just the relative path
+  - location: scripts/setup_nginx.sh  # Reference just the relative path
     timeout: 300
     runas: root
