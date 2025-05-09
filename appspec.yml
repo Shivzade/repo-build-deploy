@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: index.html
-    destination: /usr/share/ngnix/html/
+    destination: /usr/share/nginx/html/
   - source: appspec.yml
-    destination: /usr/share/ngnix/html/
+    destination: /usr/share/nginx/html/
   - source: scripts/setup_nginx.sh
     destination: home/ubuntu/scripts/setup_ngnix.sh # Ensure this path is correct
 
