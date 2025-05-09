@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Grant Execute permissions to this script
-chmod +x /home/ubuntu/scripts/setup_ngnix.sh
+chmod +x /home/ubuntu/scripts/setup_nginx.sh
 
 # Install Nginx
 yum update
