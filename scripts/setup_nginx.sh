@@ -4,8 +4,8 @@
 chmod +x /home/ubuntu/scripts/setup_nginx.sh
 
 # Install Nginx
-yum update
-yum install -y nginx
+apt update
+apt install -y nginx
 
 # Start Nginx and enable it to run on boot
 systemctl start nginx
