@@ -1,20 +1,24 @@
 #!/bin/bash
+set -e  # Exit immediately on error
 
-# Grant Execute permissions to this script
-chmod +x /home/ubuntu/scripts/setup_nginx.sh
+# Update package list
+apt update -y
 
 # Install Nginx
-apt update
 apt install -y nginx
 
-# Start Nginx and enable it to run on boot
+# Start Nginx and enable on boot
 systemctl start nginx
 systemctl enable nginx
 
-# Ensure Nginx is running
+# Check Nginx status
 if systemctl status nginx | grep "active (running)"; then
-    echo "Nginx is running"
+    echo "✅ Nginx is running"
 else
-    echo "Failed to start Nginx"
+    echo "❌ Failed to start Nginx"
     exit 1
 fi
+
+# Optional: Restart Nginx after deployment
+systemctl restart nginx
+
