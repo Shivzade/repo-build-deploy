@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+rm -rf /usr/share/nginx/html/*
+
 # Install Nginx only if not already installed
 if ! dpkg -l | grep -qw nginx; then
   echo "🔧 Installing NGINX..."
